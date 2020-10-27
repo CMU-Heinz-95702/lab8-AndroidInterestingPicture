@@ -1,25 +1,15 @@
 # 95-702 Distributed Systems for ISM
 # Lab 8 Android Application Lab
 
-# Due: Thursday, March 26, by Noon EDT
-# Credit is given via Zoom with your TA
-
-```
-For this lab, you have until the next Thursday at Noon EDT to show your work
-to your TA for credit. Even though there's still a Checkpoint for this lab
-(getting Part 1 working), you only need to show your lab ONCE to get full
-credit. We've left the Checkpoint in as a marker - and, if you only get that
-far by the due date, you'll only get 0.25 credit.
-```
 
 # Part 0
 Make sure that your IntelliJ has the Android Support plugin installed;
-it should have been installed on the original download, but check anyway. 
+it should have been installed on the original download, but check anyway.
 Choose Preferences (or File-> Settings) -> Plugins, and click on the Installed tab. You should see
 Android Support already installed; if not,
 
 You'll also need the Android SDK installed. You can do this when you create the
-Hello Android project (but it might already be installed). 
+Hello Android project (but it might already be installed).
 It does *not* replace the Java SDK.
 
 # Part 1 - Hello Android
@@ -33,7 +23,7 @@ follow the directions. Then click Next.
 click Next.
 5. Choose an "Application Name" (e.g. "Hello Android")
 6. Choose a package name (e.g edu.cmu.yourAndrewID)
-7. Select Minimum SDK API 27 and click Next
+7. Select Minimum SDK API 28 and click Next
 8. Leave defaults unchanged and click "Finish"
 
 You will see an Android project in the IDE.  It should be a fully-working "Hello
@@ -41,10 +31,10 @@ Android" app.
 
 
 1. Click on the MainActivity.java tab to view the code.
-(Need to add Android Module, Module SDK not defined. Added Android 26 )
+(Need to add Android Module, Module SDK not defined. Added Android 28 )
 2. Click the green arrow button to run. You should get a window that says, no
 USB dfevices or running emulators detected.
-3. Choose Nexus 5x API 27 and click OK.
+3. Choose Nexus 5x API 28 and click OK.
 4. The emulator should start as a separate program (it may be behind other
 windows). It should say "Hello World".
 5. Click OK
@@ -73,7 +63,7 @@ check "Cold Boot", not "Quick Boot".
 
 1. Explore the contents of the project's res directory. These are the static
   resource files that your Android app uses.  They include such things as
-  menus, user interface (UI) definitions, icons, and strings. 
+  menus, user interface (UI) definitions, icons, and strings.
 2. The file res/values/strings.xml defines static strings that are used in your
 	application. Change the string named "app_name" to include your
 	name (e.g. "Joe\'s App", with the escape character \ before the apostrophe).
@@ -88,7 +78,7 @@ check "Cold Boot", not "Quick Boot".
 7. In the Design view, scroll down the Palette to find the "Text Fields".
   Drag a new "Plain Text" field onto your screen. (Make sure you are not using
   a "Plain TextView".  Scroll down further if you can't find "Plain Text" under
-  "Text Fields".) 
+  "Text Fields".)
 8. In the Properties of this widget (Android calls it an editText element) set
   the "Hint" to "Your answer..."
 9. Save content_main.xml
@@ -97,12 +87,12 @@ Test it by launching it in your AVD:
 11. Choose the AVD you just created to run the app in.
 12. Switch to the running AVD and verify that the Hello Android app has
   successfully launched and your changes have been successful.
-  
+
 :checkered_flag: **CHECKPOINT: show Part 1 to your TA **
-  
+
 # Part 2 Interesting Picture
 
-1. Download the zipped AndroidInterestingPicture from the course calendar
+1. Download the zipped AndroidInterestingPicture from Canvas
 	into your IntelliJ workspace and unzip it.
 
 2. Open IntelliJ
@@ -122,7 +112,7 @@ see the package directory.
    Note: you will be asked to create a Yahoo account. Don't forget what you use
    as a password. Yep, a Yahoo account.
 
-6. Edit the file GetPicture.java and put your API key where it says 
+6. Edit the file GetPicture.java and put your API key where it says
   "<<<put your Flickr api key here>>>" (replace the << and >> also!).
   Remember to save the file.
 
@@ -151,7 +141,7 @@ take place in a helper thread.  AsyncTask makes it easy to use a helper
 thread.  Read the comments in GetPicture and review the AsyncTask API:
 http://developer.android.com/reference/android/os/AsyncTask.html
 
-10. The application is missing the feedback "Here is a picture of a ..." or 
+10. The application is missing the feedback "Here is a picture of a ..." or
 	"Sorry, I could not find a picture of a..."
      a. Add a new TextView to res/layout/main.xml for this feedback
      b. In the pictureReady method, findViewById your new TextView
@@ -161,7 +151,7 @@ http://developer.android.com/reference/android/os/AsyncTask.html
 11. Run and test it.
 
 12. Sort the following list of methods into the order they are invoked when
-	"submit" is clicked, and indicate whether they are being run in the "UI" 
+	"submit" is clicked, and indicate whether they are being run in the "UI"
 	thread or a helper thread. See for reference the AsyncTask API:
 	http://developer.android.com/reference/android/os/AsyncTask.html
 
@@ -177,10 +167,7 @@ http://developer.android.com/reference/android/os/AsyncTask.html
 :checkered_flag: Show a TA
 
 For credit for the lab, show a TA:
-	- Working Part 1 
+	- Working Part 1
 	- Working Part 2 through step 11
 	- Your sorted list from Part 2 step 12
 	  (BTW, a question regarding UI and helper threads is likely on the test.)
-	
-
-
