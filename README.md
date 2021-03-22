@@ -3,14 +3,22 @@
 
 
 # Part 0
-Make sure that your IntelliJ has the Android Support plugin installed;
+## Do one or the other of:
+(1) Because we've had some difficulty with using IntelliJ for this lab last semester, you should install Android Studio from:
+
+https://developer.android.com/studio
+
+(2) If you want to try IntelliJ - it works for me - make sure that your IntelliJ has the Android Support plugin installed;
 it should have been installed on the original download, but check anyway.
 Choose Preferences (or File-> Settings) -> Plugins, and click on the Installed tab. You should see
-Android Support already installed; if not,
+Android Support already installed; if not, IntelliJ will prompt you to install it.
 
 You'll also need the Android SDK installed. You can do this when you create the
 Hello Android project (but it might already be installed).
 It does *not* replace the Java SDK.
+
+Some help is here:
+https://www.jetbrains.com/help/idea/create-your-first-android-application.html
 
 # Part 1 - Hello Android
 # Create an Android Project in Android Studio
