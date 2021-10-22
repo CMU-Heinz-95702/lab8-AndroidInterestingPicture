@@ -2,7 +2,7 @@
 # Lab 8 Android Application Lab
 
 
-# Part 0: Hello Android
+# Part 0: Android Studio
 ## Do one or the other of:
 (1) Because we've had some difficulty with using IntelliJ for this lab last semester, you should install Android Studio from:
 
@@ -10,7 +10,7 @@ https://developer.android.com/studio
 
 The current version is 2020.3.1
 
-(2) If you want to try IntelliJ - it works for me - make sure that your IntelliJ has the Android Support plugin installed;
+(2) If you want to try IntelliJ, make sure that your IntelliJ has the Android Support plugin installed;
 it should have been installed on the original download, but check anyway.
 Choose Preferences (or File-> Settings) -> Plugins, and click on the Installed tab. You should see
 Android Support already installed; if not, IntelliJ will prompt you to install it.
