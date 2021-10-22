@@ -2,11 +2,13 @@
 # Lab 8 Android Application Lab
 
 
-# Part 0
+# Part 0: Hello Android
 ## Do one or the other of:
 (1) Because we've had some difficulty with using IntelliJ for this lab last semester, you should install Android Studio from:
 
 https://developer.android.com/studio
+
+The current version is 2020.3.1
 
 (2) If you want to try IntelliJ - it works for me - make sure that your IntelliJ has the Android Support plugin installed;
 it should have been installed on the original download, but check anyway.
@@ -15,7 +17,7 @@ Android Support already installed; if not, IntelliJ will prompt you to install i
 
 You'll also need the Android SDK installed. You can do this when you create the
 Hello Android project (but it might already be installed).
-It does *not* replace the Java SDK.
+It does *not* replace the Java SDK - you need that, too (at least JDK 16).
 
 Some help is here:
 https://www.jetbrains.com/help/idea/create-your-first-android-application.html
@@ -23,38 +25,34 @@ https://www.jetbrains.com/help/idea/create-your-first-android-application.html
 # Part 1 - Hello Android
 # Create an Android Project in Android Studio
 
-1. Choose File -> New -> Project
-2. Scroll down to Android (about 7 items down), *not* Java.
-3. If the Android SDK is not installed, you'll be prompted to install it -
-follow the directions. Then click Next.
-4. Then from the Phone and Tablet tab, choose "Basic Activity" and
-click Next.
-5. Choose an "Application Name" (e.g. "Hello Android")
-6. Choose a package name (e.g edu.cmu.yourAndrewID)
-7. Select Minimum SDK API 28 and click Next
-8. Leave defaults unchanged and click "Finish"
+1. Choose "Create New Project" on the startup screen (later, if you have a project already open, do Choose File -> New -> Project like usual).
+2. Choose the Phone and Tablet tab; click on Basic Activity, then click Next.
+3. Choose an "Application Name" (e.g. "Hello Android"). This will change the Package name and Save location automatically.
+4. Change the package name to something reasonable (e.g edu.cmu.<yourAndrewID>)
+5. (Optional) Change the Save location by clicking the small file folder icon to bring up the FileChooser. You may need to enter a new directory name.
+6. Change the language to "Java" - it probably will default to "Kotlin".
+7. Select Minimum SDK API 28 (Android 9.0 Pie) and click Finish.
+8. The "Installing Requested Components" window will show next; wait for it to load everything, then click Finish.
 
-You will see an Android project in the IDE.  It should be a fully-working "Hello
-Android" app.
+**(Optional)** If you have multiple versions of the Java JDK installed - in particular, if you have 1.8 - it might default to an older version, which will not be compatible with the current version of the Android SDK. If you think that's an issue (you project doesn't build and the error message says you're using 1.8, say), then do this:
+- click AndroidStudio->Preferences->Build,Execution,Deployment->Build Tool ->Gradle
+- click the down arrow at the end of the Gradle JDK field
+- if jdk-16 (or higher) shows up, click that; if not, click other, and (hopefully) all your JDK versions will show up: click jdk-16 and Open
+- click Apply and OK
 
-
-1. Click on the MainActivity.java tab to view the code.
-(Need to add Android Module, Module SDK not defined. Added Android 28 )
-2. Click the green arrow button to run. You should get a window that says, no
-USB dfevices or running emulators detected.
-3. Choose Nexus 5x API 28 and click OK.
-4. The emulator should start as a separate program (it may be behind other
-windows). It should say "Hello World".
-5. Click OK
+You will see an Android project in the IDE; it will take a few moments to build.  It should be a fully-working "Hello Android" app.
 
 ## Test Hello Android in the AVD
 
-Test your Hello Android app by launching it in your Android Virtual Device (AVD,
-also known as the Emulator):
-1) Click the green play triangle in the Android Studio menubar to run the app.
-2) Choose the AVD you just created to run the app in.
-3) Switch to the running AVD and verify that the Hello Android app has
-  successfully launched.
+1. Click on the MainActivity.java tab to view the code.
+2. Pixel 5 API 30 will likely be the default showing in the box next to the green triangle. Expand dropdown menu next to the green triangle button. Choose AVD Manager (at the bottom).
+3. Click the Create Virtual Device button at the bottom.
+- Choose **Nexus 5**; click Next
+- choose **API level 28**; download that. Highlight it and click Next.
+- Nexus 5 API 28 should show up in the Your Virtual Devices screen. Close that window.
+- Nexus 5 API 28 should also show up in the dropdown box next to the green triangle. Make sure it's selected before running.
+4. Click the green triangle.
+5. Switch to the running AVD and verify that the Hello Android app has successfully launched. It may take a few moments for the emulator's phone to boot up. The emulator should start as a separate program (it may be behind other windows). It should say "Hello First Fragment".
 
 IF YOU HAVE TROUBLE with the AVD - in particular, if you get the message
 "Waiting for process to come online" and then it times out - try these fixes,
@@ -62,10 +60,9 @@ one at a time:
 https://www.technipages.com/android-emulator-stuck-waiting-for-target-to-come-online
 
 IF THE ANDROID EMULATOR BOOTS UP BUT THE APP DOES NOT LAUNCH - check if you're
-using "Quick Boot": go to the AVD Tools -> Android -> AVD Manager; and edit the
-configuration (the pencil) of the AVD,
-then click Show Advanced Settings. Scroll down to Emulated Performance and
-check "Cold Boot", not "Quick Boot".
+using "Quick Boot": go to the Tools -> AVD Manager; click the down arrow on the right side of your chosen virtual device, and choose Edit .
+Click Show Advanced Settings. Scroll down to Emulated Performance and
+check "Cold Boot", not "Quick Boot". Click Finish. Then rebuild the app and run it again.
 
 ## Exercises
 
@@ -73,42 +70,30 @@ check "Cold Boot", not "Quick Boot".
   resource files that your Android app uses.  They include such things as
   menus, user interface (UI) definitions, icons, and strings.
 2. The file res/values/strings.xml defines static strings that are used in your
-	application. Change the string named "app_name" to include your
+	application. Change the string named "first_fragment_label" to include your
 	name (e.g. "Joe\'s App", with the escape character \ before the apostrophe).
 3. Save strings.xml
-4. Edit res/layout/activity_main.xml. Notice that this is the UI definition of
-  the main Activity.  It "includes" a layout for content_main.
-5. Edit res/layout/content_main.xml.  This is the part of the screen layout
-  that has the "Hello World" message.  Change the text from "Hello World" to
-  "Welcome to my new app".
-6. Notice the "Design" and "Text" tabs.  Toggle between them to understand what
-  they allow you to do.
-7. In the Design view, scroll down the Palette to find the "Text Fields".
-  Drag a new "Plain Text" field onto your screen. (Make sure you are not using
-  a "Plain TextView".  Scroll down further if you can't find "Plain Text" under
-  "Text Fields".)
-8. In the Properties of this widget (Android calls it an editText element) set
-  the "Hint" to "Your answer..."
-9. Save content_main.xml
-Test it by launching it in your AVD:
+4. Examine res/layout/activity_main.xml. Notice that this is the UI definition of the main Activity.  It "includes" a layout for content_main. You'll likely be in "Design Mode" initially; change to "Code" using the button at the top right.
+5. Edit res/layout/content_main.xml.  This is the part of the screen layout for the overall app. Change the color from colorPrimary to colorSecondary.
+6. Edit fragment_first.xml. In the Design view, in the Palette window, click on Text. Drag a new "Plain Text" field onto your screen.
+7. In the Properties of this widget, find the Common Attributes, and set
+  the text to "Hello Android"
+8. Save content_main.xml
+9. Use the red square to stop the app (if it was running).
 10. Click the green play triangle in the Android Studio menubar to run the app.
 11. Choose the AVD you just created to run the app in.
 12. Switch to the running AVD and verify that the Hello Android app has
   successfully launched and your changes have been successful.
 
-:checkered_flag: **CHECKPOINT: show Part 1 to your TA **
+:checkered_flag: **CHECKPOINT: Part 1 ends here**
 
 # Part 2 Interesting Picture
 
-1. Download the zipped AndroidInterestingPicture from Canvas
-	into your IntelliJ workspace and unzip it.
+1. Download the zipped AndroidInterestingPicture from Canvas and unzip it.
 
-2. Open IntelliJ
-  If you already have a window open from Part 1, close it
+2. Open Android Studio. If you already have a window open from Part 1, close it.
 
-3. You should be back to the smaller IntelliJ window; choose Import Project
-(or File -> New -> Project from existing sources...).  From the file chooser,
-choose the folder containing AndroidInterestingPicture.
+3. Choose File->New->Import Project. From the file chooser, choose the folder containing AndroidInterestingPicture.
 
 4. Choose "Import project from external model", then Android Gradle and click
 Finish. The project should open; navigate to app->src->main->java, where you'll
@@ -121,7 +106,7 @@ see the package directory.
    as a password. Yep, a Yahoo account.
 
 6. Edit the file GetPicture.java and put your API key where it says
-  "<<<put your Flickr api key here>>>" (replace the << and >> also!).
+  "<< put your Flickr api key here >>" (replace the << and >> also!).
   Remember to save the file.
 
 7. Click the green play triangle in the Android Studio menubar to run the app.
@@ -151,7 +136,7 @@ http://developer.android.com/reference/android/os/AsyncTask.html
 
 10. The application is missing the feedback "Here is a picture of a ..." or
 	"Sorry, I could not find a picture of a..."
-     a. Add a new TextView to res/layout/main.xml for this feedback
+     a. Add a new TextView to res/layout/content_main.xml for this feedback
      b. In the pictureReady method, findViewById your new TextView
      c. Set the text of the TextView to the appropriate string (depending on
      		whether the picture is found or not).
@@ -172,10 +157,4 @@ http://developer.android.com/reference/android/os/AsyncTask.html
       onPostExecute
       pictureReady
 
-:checkered_flag: Show a TA
-
-For credit for the lab, show a TA:
-	- Working Part 1
-	- Working Part 2 through step 11
-	- Your sorted list from Part 2 step 12
-	  (BTW, a question regarding UI and helper threads is likely on the test.)
+:checkered_flag: **Part 2 ends here**
