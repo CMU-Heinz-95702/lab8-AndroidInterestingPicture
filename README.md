@@ -138,8 +138,7 @@ http://developer.android.com/reference/android/os/AsyncTask.html
 	"Sorry, I could not find a picture of a..."
      a. Add a new TextView to res/layout/content_main.xml for this feedback
      b. In the pictureReady method, findViewById your new TextView
-     c. Set the text of the TextView to the appropriate string (depending on
-     		whether the picture is found or not).
+     c. Set the text of the TextView to the appropriate string (depending on whether the picture is found or not).
        (Where can you get the search term from to add to this string?)
 11. Run and test it.
 
@@ -149,12 +148,19 @@ http://developer.android.com/reference/android/os/AsyncTask.html
 	http://developer.android.com/reference/android/os/AsyncTask.html
 
       AsyncFlickrSearch.search
+
       doInBackground
+
       GetPicture.search
+
       getRemoteImage
+
       getRemoteXML
+
       onClick
+
       onPostExecute
+
       pictureReady
 
 :checkered_flag: **Part 2 ends here**
