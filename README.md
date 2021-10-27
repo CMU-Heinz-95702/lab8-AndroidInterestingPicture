@@ -106,7 +106,9 @@ see the package directory.
    as a password. Yep, a Yahoo account.
 
 6. Edit the file GetPicture.java and put your API key where it says
-  "<< put your Flickr api key here >>" (replace the << and >> also!).
+  "<< put your Flickr api key here >>" so that it has the form
+  "api_key=552ev..."
+  (You have to add "api_key=" and then your key; replace the << and >> also!).
   Remember to save the file.
 
 7. Click the green play triangle in the Android Studio menubar to run the app.
