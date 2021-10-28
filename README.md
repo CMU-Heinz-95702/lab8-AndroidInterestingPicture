@@ -19,8 +19,19 @@ You'll also need the Android SDK installed. You can do this when you create the
 Hello Android project (but it might already be installed).
 It does *not* replace the Java SDK - you need that, too (at least JDK 16).
 
-Some help is here:
+Some help is here (some of this will apply to Part 2 only):
 https://www.jetbrains.com/help/idea/create-your-first-android-application.html
+
+**Other possible problems and potential solutions:**
+
+License not accepted: 
+https://stackoverflow.com/questions/54273412/failed-to-install-the-following-android-sdk-packages-as-some-licences-have-not
+
+Emulator issues: make sure you have enough disk space (1 gig or more)
+
+MacBook with M1 chip: https://stackoverflow.com/questions/65016541/android-emulator-doesnt-work-on-apple-m1-chip: "There is an arm64 release version available for Android Studio Arctic Fox (2020.3.1) You can download it here https://developer.android.com/studio/archive"
+
+In Part 2, AndroidInterestingPicture: I/System.out: No picture: you probably did not construct the api key correctly. See Part2, #6.
 
 # Part 1 - Hello Android
 # Create an Android Project in Android Studio
