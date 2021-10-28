@@ -19,12 +19,12 @@ You'll also need the Android SDK installed. You can do this when you create the
 Hello Android project (but it might already be installed).
 It does *not* replace the Java SDK - you need that, too (at least JDK 16).
 
-Some help is here (some of this will apply to Part 2 only):
+Some help is here:
 https://www.jetbrains.com/help/idea/create-your-first-android-application.html
 
-**Other possible problems and potential solutions:**
+**Other possible problems and potential solutions:** (some of this will apply to Part 2 only)
 
-License not accepted: 
+License not accepted:
 https://stackoverflow.com/questions/54273412/failed-to-install-the-following-android-sdk-packages-as-some-licences-have-not
 
 Emulator issues: make sure you have enough disk space (1 gig or more)
