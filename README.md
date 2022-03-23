@@ -65,7 +65,7 @@ check "Cold Boot", not "Quick Boot". Click Finish. Then rebuild the app and run 
 1. Explore the contents of the project's res directory. These are the static resource files that your Android app uses.  They include such things as menus, user interface (UI) definitions, icons, and strings.
 2. The file res/values/strings.xml defines static strings that are used in your application. Change the string named "first_fragment_label" to include your name (e.g. "Joe\'s App", with the escape character \ before the apostrophe).
 3. Save strings.xml
-4. Examine res/layout/activity_main.xml. Notice that this is the UI definition of the main Activity.  It "includes" a layout for content_main. You'll likely be in "Design Mode" initially; change to "Code" using the button at the top right.
+4. Examine res/layout/contet_main.xml. Notice that this is the UI definition of the main Activity.  It "includes" a layout for content_main. You'll likely be in "Design Mode" initially; change to "Code" using the button at the top right.
 5. Edit res/layout/content_main.xml.  This is the part of the screen layout for the overall app. Change the color from colorPrimary to colorSecondary.
 6. Edit fragment_first.xml. In the Design view, in the Palette window, click on Text. Drag a new "Plain Text" field onto your screen.
 7. In the Properties of this widget, find the Common Attributes, and set the text to "Hello Android"
