@@ -3,35 +3,22 @@
 
 
 # Part 0: Android Studio
-## Do one or the other of:
-(1) Because we've had some difficulty with using IntelliJ for this lab last semester, you should install Android Studio from:
+## You can do use AndroidStudio or IntelliJ, but AndroidStudio is **much** preferred!
+
+### AndroidStudio Installation:
+Install Android Studio from:
 
 https://developer.android.com/studio
 
-The current version is 2020.3.1
+The current version is 2021.1.1 (Bumblebee)
 
-(2) If you want to try IntelliJ, make sure that your IntelliJ has the Android Support plugin installed;
-it should have been installed on the original download, but check anyway.
-Choose Preferences (or File-> Settings) -> Plugins, and click on the Installed tab. You should see
-Android Support already installed; if not, IntelliJ will prompt you to install it.
+### Intellij:
+If you want to try IntelliJ, make sure that your IntelliJ has the Android Support plugin installed; it should have been installed on the original download, but check anyway.  Choose Preferences (or File-> Settings) -> Plugins, and click on the Installed tab. You should see Android Support already installed; if not, IntelliJ will prompt you to install it.  
 
-You'll also need the Android SDK installed. You can do this when you create the
-Hello Android project (but it might already be installed).
-It does *not* replace the Java SDK - you need that, too (at least JDK 16).
+You'll also need the Android SDK installed. You can do this when you create the Hello Android project (but it might already be installed).  It does *not* replace the Java SDK - you need that, too (at least JDK 16).  
 
 Some help is here:
 https://www.jetbrains.com/help/idea/create-your-first-android-application.html
-
-**Other possible problems and potential solutions:** (some of this will apply to Part 2 only)
-
-License not accepted:
-https://stackoverflow.com/questions/54273412/failed-to-install-the-following-android-sdk-packages-as-some-licences-have-not
-
-Emulator issues: make sure you have enough disk space (1 gig or more)
-
-MacBook with M1 chip: https://stackoverflow.com/questions/65016541/android-emulator-doesnt-work-on-apple-m1-chip: "There is an arm64 release version available for Android Studio Arctic Fox (2020.3.1) You can download it here https://developer.android.com/studio/archive"
-
-In Part 2, AndroidInterestingPicture: I/System.out: No picture: you probably did not construct the api key correctly. See Part2, #6.
 
 # Part 1 - Hello Android
 # Create an Android Project in Android Studio
@@ -42,13 +29,17 @@ In Part 2, AndroidInterestingPicture: I/System.out: No picture: you probably did
 4. Change the package name to something reasonable (e.g edu.cmu.<yourAndrewID>)
 5. (Optional) Change the Save location by clicking the small file folder icon to bring up the FileChooser. You may need to enter a new directory name.
 6. Change the language to "Java" - it probably will default to "Kotlin".
-7. Select Minimum SDK API 28 (Android 9.0 Pie) and click Finish.
+7. Select Minimum SDK API 30 (Android 11 R) and click Finish. (If you choose a higher level, there will be fewer phones to choose from. If you choose something lower, it should still work ... up to a point.)
 8. The "Installing Requested Components" window will show next; wait for it to load everything, then click Finish.
 
 **(Optional)** If you have multiple versions of the Java JDK installed - in particular, if you have 1.8 - it might default to an older version, which will not be compatible with the current version of the Android SDK. If you think that's an issue (you project doesn't build and the error message says you're using 1.8, say), then do this:
+
 - click AndroidStudio->Preferences->Build,Execution,Deployment->Build Tool ->Gradle
+
 - click the down arrow at the end of the Gradle JDK field
+
 - if jdk-16 (or higher) shows up, click that; if not, click other, and (hopefully) all your JDK versions will show up: click jdk-16 and Open
+
 - click Apply and OK
 
 You will see an Android project in the IDE; it will take a few moments to build.  It should be a fully-working "Hello Android" app.
@@ -56,47 +47,35 @@ You will see an Android project in the IDE; it will take a few moments to build.
 ## Test Hello Android in the AVD
 
 1. Click on the MainActivity.java tab to view the code.
-2. Pixel 5 API 30 will likely be the default showing in the box next to the green triangle. Expand dropdown menu next to the green triangle button. Choose AVD Manager (at the bottom).
-3. Click the Create Virtual Device button at the bottom.
-- Choose **Nexus 5**; click Next
-- choose **API level 28**; download that. Highlight it and click Next.
-- Nexus 5 API 28 should show up in the Your Virtual Devices screen. Close that window.
-- Nexus 5 API 28 should also show up in the dropdown box next to the green triangle. Make sure it's selected before running.
-4. Click the green triangle.
-5. Switch to the running AVD and verify that the Hello Android app has successfully launched. It may take a few moments for the emulator's phone to boot up. The emulator should start as a separate program (it may be behind other windows). It should say "Hello First Fragment".
+2. Pixel 5 API 30 will likely be the default showing in the box next to the green triangle. Keep this setting. But if you want to experiement with other devices, open the Device Manager by expanding dropdown menu next to the green triangle button and choosing Device Manager (at the bottom).
+3. Click the green triangle.
+4. Switch to the running AVD and verify that the Hello Android app has successfully launched. It may take a few moments for the emulator's phone to boot up. The emulator should start as a separate program (it may be behind other windows). It should say "Hello First Fragment".
 
-IF YOU HAVE TROUBLE with the AVD - in particular, if you get the message
-"Waiting for process to come online" and then it times out - try these fixes,
-one at a time:
+IF YOU HAVE TROUBLE with the emulator - in particular, if you get the message "Waiting for process to come online" and then it times out - try the fixes on this web site, one at a time:
+
 https://www.technipages.com/android-emulator-stuck-waiting-for-target-to-come-online
 
-IF THE ANDROID EMULATOR BOOTS UP BUT THE APP DOES NOT LAUNCH - check if you're
-using "Quick Boot": go to the Tools -> AVD Manager; click the down arrow on the right side of your chosen virtual device, and choose Edit .
+IF THE ANDROID EMULATOR BOOTS UP BUT THE APP DOES NOT LAUNCH - check if you're using "Quick Boot": go to the Tools -> Device Manager; click the down arrow on the right side of your chosen virtual device, and choose Edit .
+
 Click Show Advanced Settings. Scroll down to Emulated Performance and
 check "Cold Boot", not "Quick Boot". Click Finish. Then rebuild the app and run it again.
 
 ## Exercises
 
-1. Explore the contents of the project's res directory. These are the static
-  resource files that your Android app uses.  They include such things as
-  menus, user interface (UI) definitions, icons, and strings.
-2. The file res/values/strings.xml defines static strings that are used in your
-	application. Change the string named "first_fragment_label" to include your
-	name (e.g. "Joe\'s App", with the escape character \ before the apostrophe).
+1. Explore the contents of the project's res directory. These are the static resource files that your Android app uses.  They include such things as menus, user interface (UI) definitions, icons, and strings.
+2. The file res/values/strings.xml defines static strings that are used in your application. Change the string named "first_fragment_label" to include your name (e.g. "Joe\'s App", with the escape character \ before the apostrophe).
 3. Save strings.xml
 4. Examine res/layout/activity_main.xml. Notice that this is the UI definition of the main Activity.  It "includes" a layout for content_main. You'll likely be in "Design Mode" initially; change to "Code" using the button at the top right.
 5. Edit res/layout/content_main.xml.  This is the part of the screen layout for the overall app. Change the color from colorPrimary to colorSecondary.
 6. Edit fragment_first.xml. In the Design view, in the Palette window, click on Text. Drag a new "Plain Text" field onto your screen.
-7. In the Properties of this widget, find the Common Attributes, and set
-  the text to "Hello Android"
+7. In the Properties of this widget, find the Common Attributes, and set the text to "Hello Android"
 8. Save content_main.xml
 9. Use the red square to stop the app (if it was running).
 10. Click the green play triangle in the Android Studio menubar to run the app.
 11. Choose the AVD you just created to run the app in.
-12. Switch to the running AVD and verify that the Hello Android app has
-  successfully launched and your changes have been successful.
+12. Switch to the running AVD and verify that the Hello Android app has successfully launched and your changes have been successful.
 
-:checkered_flag: **CHECKPOINT: Part 1 ends here**
+:checkered_flag: **CHECKPOINT: show Part 1 to your TA**
 
 # Part 2 Interesting Picture
 
@@ -106,61 +85,41 @@ check "Cold Boot", not "Quick Boot". Click Finish. Then rebuild the app and run 
 
 3. Choose File->New->Import Project. From the file chooser, choose the folder containing AndroidInterestingPicture.
 
-4. Choose "Import project from external model", then Android Gradle and click
-Finish. The project should open; navigate to app->src->main->java, where you'll
-see the package directory.
+4. Choose "Import project from external model", then Android Gradle and click Finish. The project should open; navigate to app->src->main->java, where you'll see the package directory.
 
 5. Get a Flickr API key from:
 	http://www.flickr.com/services/api/misc.api_keys.html
 
-   Note: you will be asked to create a Yahoo account. Don't forget what you use
-   as a password. Yep, a Yahoo account.
+   Note: you will be asked to create a Yahoo account. Don't forget what you use as a password. Yep, a Yahoo account.
 
-6. Edit the file GetPicture.java and put your API key where it says
-  "<< put your Flickr api key here >>" so that it has the form
-  "api_key=552ev..."
-  (You have to add "api_key=" and then your key; replace the << and >> also!).
-  Remember to save the file.
+6. Edit the file GetPicture.java and put your API key where it says "<< put your Flickr api key here >>" (replace the << and >> also!). Remember to save the file.
 
 7. Click the green play triangle in the Android Studio menubar to run the app.
 8. Choose the AVD you just created to run the app in.
-9. Switch to the running AVD and verify that the InterestingPicture app has
-  successfully launched.  Type in a keyword to search such as "boat" and
-  click Submit and you should see a picture displayed.
+9. Switch to the running AVD and verify that the InterestingPicture app has successfully launched.  Type in a keyword to search such as "boat" and click Submit and you should see a picture displayed.
 
-Explore the project folders. The most important are the "java" and "res"
-folders.  The java folder has the source code for the application, and
-the res folder has the static resources as you saw in Part 1.
+Explore the project folders. The most important are the "java" and "res" folders.  The java folder has the source code for the application, and the res folder has the static resources as you saw in Part 1.
 
 Within the java folder, you will see two classes:
-ds.cmu.edu.interestingpicture.InterestingPicture
-ds.cmu.edu.interestingpicture.GetPicture
 
-Study the InterestingPicture class.  Android applications are organized into
-"activities" and this is the main activity for this application.  Read the
-comments and the code and understand how it works.
+ds.cmu.edu.androidinterestingpicture.InterestingPicture
+ds.cmu.edu.androidinterestingpicture.GetPicture
 
-The GetPicture class is used to first search Flickr for a pictures related to
-a keyword, and then fetch a picture.  So that the phone user interface is not
-frozen while these network activities take place, these network actions must
-take place in a helper thread.  AsyncTask makes it easy to use a helper
-thread.  Read the comments in GetPicture and review the AsyncTask API:
+Study the InterestingPicture class.  Android applications are organized into "activities" and this is the main activity for this application.  Read the comments and the code and understand how it works.
+
+The GetPicture class is used to first search Flickr for picture URL's related to a keyword, and then fetch a picture.  So that the phone user interface is not frozen while these network activities take place, these network actions must take place in a helper thread.  BackgroundTask makes it easy (depending on your definition of "easy"!) to use a helper thread.  Read the comments in GetPicture and BackgroundTask. Note that BackgroundTask is a work-alike for the deprecated class AsyncTask, which you can read about here:
+
 http://developer.android.com/reference/android/os/AsyncTask.html
 
-10. The application is missing the feedback "Here is a picture of a ..." or
-	"Sorry, I could not find a picture of a..."
+10. The application is missing the feedback "Here is a picture of a ..." or "Sorry, I could not find a picture of a..."
      a. Add a new TextView to res/layout/content_main.xml for this feedback
      b. In the pictureReady method, findViewById your new TextView
-     c. Set the text of the TextView to the appropriate string (depending on whether the picture is found or not).
-       (Where can you get the search term from to add to this string?)
+     c. Set the text of the TextView to the appropriate string (depending on whether the picture is found or not). (Where can you get the search term from to add to this string?)
 11. Run and test it.
 
-12. Sort the following list of methods into the order they are invoked when
-	"submit" is clicked, and indicate whether they are being run in the "UI"
-	thread or a helper thread. See for reference the AsyncTask API:
-	http://developer.android.com/reference/android/os/AsyncTask.html
+12. Sort the following list of methods into the order they are invoked when "submit" is clicked, and indicate whether they are being run in the "UI" thread or a helper thread. See the documentation inside BackgroundTask.
 
-      AsyncFlickrSearch.search
+      BackgroundTask.search
 
       doInBackground
 
@@ -176,4 +135,8 @@ http://developer.android.com/reference/android/os/AsyncTask.html
 
       pictureReady
 
-:checkered_flag: **Part 2 ends here**
+:checkered_flag: **For full credit for the lab, show a TA:
+	- Working Part 1 (the quarter-point checkpoint)
+	- Working Part 2 through step 11
+	- Your sorted list from Part 2 step 12
+	  (BTW, a question regarding UI and helper threads is likely on the test.)**
