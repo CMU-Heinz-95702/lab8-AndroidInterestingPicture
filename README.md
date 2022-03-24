@@ -3,22 +3,14 @@
 
 
 # Part 0: Android Studio
-## You can do use AndroidStudio or IntelliJ, but AndroidStudio is **much** preferred!
+## Install AndroidStudio
 
 ### AndroidStudio Installation:
 Install Android Studio from:
 
 https://developer.android.com/studio
 
-The current version is 2021.1.1 (Bumblebee)
-
-### Intellij:
-If you want to try IntelliJ, make sure that your IntelliJ has the Android Support plugin installed; it should have been installed on the original download, but check anyway.  Choose Preferences (or File-> Settings) -> Plugins, and click on the Installed tab. You should see Android Support already installed; if not, IntelliJ will prompt you to install it.  
-
-You'll also need the Android SDK installed. You can do this when you create the Hello Android project (but it might already be installed).  It does *not* replace the Java SDK - you need that, too (at least JDK 16).  
-
-Some help is here:
-https://www.jetbrains.com/help/idea/create-your-first-android-application.html
+The current version is 2021.3.1 (Bumblebee)
 
 # Part 1 - Hello Android
 # Create an Android Project in Android Studio
@@ -27,7 +19,7 @@ https://www.jetbrains.com/help/idea/create-your-first-android-application.html
 2. Choose the Phone and Tablet tab; click on Basic Activity, then click Next.
 3. Choose an "Application Name" (e.g. "Hello Android"). This will change the Package name and Save location automatically.
 4. Change the package name to something reasonable (e.g edu.cmu.<yourAndrewID>)
-5. (Optional) Change the Save location by clicking the small file folder icon to bring up the FileChooser. You may need to enter a new directory name.
+5. (Optional, but recommended) Change the Save location by clicking the small file folder icon to bring up the FileChooser. You may need to enter a new directory name.
 6. Change the language to "Java" - it probably will default to "Kotlin".
 7. Select Minimum SDK API 30 (Android 11 R) and click Finish. (If you choose a higher level, there will be fewer phones to choose from. If you choose something lower, it should still work ... up to a point.)
 8. The "Installing Requested Components" window will show next; wait for it to load everything, then click Finish.
@@ -47,11 +39,11 @@ You will see an Android project in the IDE; it will take a few moments to build.
 ## Test Hello Android in the AVD
 
 1. Click on the MainActivity.java tab to view the code.
-2. Pixel 5 API 30 will likely be the default showing in the box next to the green triangle. Keep this setting. But if you want to experiement with other devices, open the Device Manager by expanding dropdown menu next to the green triangle button and choosing Device Manager (at the bottom).
+2. Pixel 5 API 30 will likely be the default showing in the box next to the green triangle. Keep this setting. But if you want to experiment with other devices, open the Device Manager by expanding dropdown menu next to the green triangle button and choosing Device Manager (at the bottom).
 3. Click the green triangle.
-4. Switch to the running AVD and verify that the Hello Android app has successfully launched. It may take a few moments for the emulator's phone to boot up. The emulator should start as a separate program (it may be behind other windows). It should say "Hello First Fragment".
+4. Switch to the running AVD and verify that the Hello Android app has successfully launched. It may take a few moments for the emulator's phone to boot up. The emulator will either start as a separate program (it may be behind other windows), or it will be in a sub-window inside AndroidStudio. If a blank phone shows up, you may have to click the power button in the to left-hand corner. The app should display "Hello First Fragment". Click the "Next" button; it should display "Second Fragment". Click "Next" to get back to the first Fragment. (Note: ***Fragments*** are the standard Android way to show multiple screens within one Activity. Part 2 does not use Fragments to keep things a little simpler.)
 
-IF YOU HAVE TROUBLE with the emulator - in particular, if you get the message "Waiting for process to come online" and then it times out - try the fixes on this web site, one at a time:
+**IF YOU HAVE TROUBLE** with the emulator - in particular, if you get the message "Waiting for process to come online" and then it times out - try the fixes on this web site, one at a time:
 
 https://www.technipages.com/android-emulator-stuck-waiting-for-target-to-come-online
 
@@ -60,20 +52,29 @@ IF THE ANDROID EMULATOR BOOTS UP BUT THE APP DOES NOT LAUNCH - check if you're u
 Click Show Advanced Settings. Scroll down to Emulated Performance and
 check "Cold Boot", not "Quick Boot". Click Finish. Then rebuild the app and run it again.
 
+If you get a message that your API is missing or corrupted, try these steps:
+
+1. Click File->Settings->Appearance & Behavior->System Settings->Android SDK
+2. Open the SDK Tool tab.
+3. Scroll down to the bottom; on the right, click "Show Package Details"
+4. If your API is corrupted, unclick its checkbox and click Apply. If no API is loaded, check API 30 and click Apply.
+
 ## Exercises
 
 1. Explore the contents of the project's res directory. These are the static resource files that your Android app uses.  They include such things as menus, user interface (UI) definitions, icons, and strings.
 2. The file res/values/strings.xml defines static strings that are used in your application. Change the string named "first_fragment_label" to include your name (e.g. "Joe\'s App", with the escape character \ before the apostrophe).
 3. Save strings.xml
 4. Examine res/layout/content_main.xml. Notice that this is the UI definition of the main Activity.  It "includes" a layout for content_main. You'll likely be in "Design Mode" initially; change to "Code" using the button at the top right.
-5. Edit res/layout/content_main.xml.  This is the part of the screen layout for the overall app. Change the color from colorPrimary to colorSecondary.
-6. Edit fragment_first.xml. In the Design view, in the Palette window, click on Text. Drag a new "Plain Text" field onto your screen.
-7. In the Properties of this widget, find the Common Attributes, and set the text to "Hello Android"
+5. Edit res/layout/activity_main.xml.  This is the part of the screen layout for the overall app. Change the color from colorPrimary to colorSecondary.
+6. Edit fragment_first.xml. In the Design view, in the Palette window, click on ***Text***. Drag a new "Plain Text" field from the next column onto your screen.
+7. In the Properties of this widget, find the Common Attributes on the right-hand side (you'll need to scroll down), and set the text to "Hello Android"
 8. Save content_main.xml
 9. Use the red square to stop the app (if it was running).
 10. Click the green play triangle in the Android Studio menubar to run the app.
 11. Choose the AVD you just created to run the app in.
 12. Switch to the running AVD and verify that the Hello Android app has successfully launched and your changes have been successful.
+
+To stop the emulator, turn off the phone via the power button and also click the red square for the app.
 
 :checkered_flag: **CHECKPOINT: show Part 1 to your TA**
 
