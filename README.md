@@ -114,9 +114,7 @@ ds.cmu.edu.interestingpicture.GetPicture
 
 Study the InterestingPicture class.  Android applications are organized into "activities" and this is the main activity for this application.  Read the comments and the code and understand how it works.
 
-The GetPicture class is used to first search Flickr for a pictures related to a keyword, and then fetch a picture.  So that the phone user interface is not frozen while these network activities take place, these network actions must take place in a helper thread.  AsyncTask makes it easy to use a helper thread.  Read the comments in GetPicture and review the AsyncTask API:
-
-http://developer.android.com/reference/android/os/AsyncTask.html
+The GetPicture class is used to first search Flickr for a pictures related to a keyword, and then fetch a picture.  So that the phone user interface is not frozen while these network activities take place, these network actions must take place in a helper thread.  BackgroundTask makes it easy to use a helper thread.
 
 10. The application is missing the feedback "Here is a picture of a ..." or "Sorry, I could not find a picture of a..."
      a. Add a new TextView to res/layout/content_main.xml for this feedback
@@ -125,9 +123,7 @@ http://developer.android.com/reference/android/os/AsyncTask.html
        (Where can you get the search term from to add to this string?)
 11. Run and test it.
 
-12. Sort the following list of methods into the order they are invoked when "submit" is clicked, and indicate whether they are being run in the "UI" thread or a helper thread. See for reference the AsyncTask API:
-
-	http://developer.android.com/reference/android/os/AsyncTask.html
+12. Sort the following list of methods into the order they are invoked when "submit" is clicked, and indicate whether they are being run in the "UI" thread or a helper thread.
 
       BackgroundTask.search
 
