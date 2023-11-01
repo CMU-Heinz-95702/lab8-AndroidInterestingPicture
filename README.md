@@ -12,7 +12,7 @@ Install Android Studio from:
 
 https://developer.android.com/studio
 
-The current version is Android Studio Electric Eel (2022.1.1 Patch 2).
+The current version is Android Studio Giraffe, 2023.3.1, but newer versions are available.
 
 ### Intellij:
 If you want to try IntelliJ, make sure that your IntelliJ has the Android Support plugin installed; it should have been installed on the original download, but check anyway.  Choose Preferences (or File-> Settings) -> Plugins, and click on the Installed tab. You should see Android Support already installed; if not, IntelliJ will prompt you to install it.  
@@ -26,12 +26,12 @@ https://www.jetbrains.com/help/idea/create-your-first-android-application.html
 # Create an Android Project in Android Studio
 
 1. Choose "Create New Project" on the startup screen (later, if you have a project already open, do Choose File -> New -> Project like usual).
-2. Choose the Phone and Tablet tab; click on the **Basic Activity** icon, then click Next.
+2. Choose the Phone and Tablet tab; click on the **Basic Views Activity** icon, then click Next.
 3. Choose "HelloAndroid" as the project Name. This will change the Package name and Save location automatically.
 4. Change the package name to something reasonable (e.g ds.edu.cmu.<yourAndrewID>)
 5. (Optional) Change the Save location by clicking the small file folder icon to bring up the FileChooser. You may need to enter a new directory name.
 6. Change the language to "Java" - it might default to "Kotlin" or nothing.
-7. Select Minimum SDK API 33 (Android 13 Tiramisu) and click Finish. (Choosing a higher level will result in fewer phones to choose from, but we'll be using an emulator.) Click Finish.
+7. Select Minimum SDK API 34 (Android 13 Tiramisu) - higher is fine, too - Gradle, and click Finish. (Choosing a higher level will result in fewer phones to choose from, but we'll be using an emulator.) Click Finish.
 8. The "Completing Requested Actions" window will show next; wait for it to load everything, then click Finish. The default project will show up; the Gradle build may take a moment.
 
 You will see an Android project in the IDE; it will take a few moments to build.  It should be a fully-working "Hello Android" app.
@@ -42,7 +42,7 @@ You will see an Android project in the IDE; it will take a few moments to build.
 
 - click the down arrow at the end of the Gradle JDK field
 
-- if jdk-17 shows up (16 is fine, too), click that; if not, click other, and (hopefully) all your JDK versions will show up: click jdk-17 and Open
+- if jdk-17 shows up (16 is fine, too), click that; if not, click other, and (hopefully) all your JDK versions will show up: anything 16 or higher should be fine
 
 - click Apply and OK
 
