@@ -70,10 +70,10 @@ Look at the running app. **Note the background color of the bar** at the top of 
 ## Exercises
 
 1. Explore the contents of the project's res directory. These are the static resource files that your Android app uses.  They include such things as menus, user interface (UI) definitions, icons, and strings.
-2. Expand res>layout to see the file strings.xml; this defines static strings that are used in your application. Change the string named "first_fragment_label", which currently should have the value "First Fragment", to your name (e.g. "Joe\'s App", with the escape character \ before the apostrophe). It is recommended practice to place String constants in this file instead of defining them in your code.
+2. Expand res>values to see the file strings.xml; this defines static strings that are used in your application. Change the string named "first_fragment_label", which currently should have the value "First Fragment", to your name (e.g. "Joe\'s App", with the escape character \ before the apostrophe). It is recommended practice to place String constants in this file instead of defining them in your code.
 3. Save strings.xml
 4. Examine res/layout/activity_main.xml. Notice that this is the UI definition of the main Activity.  It does an "include layout" at the end for content_main. You'll likely be in "Design Mode" initially; change to "Code" using the button at the top right.
-5. Edit res/layout/activity_main.xml.  This is the part of the screen layout for the overall app. Change the color from colorPrimary to colorSecondary (it's in the widget.Toolbar section). Did you notice the background color when you ran it before? This will change to a different color; make sure it does!
+5. Edit res/layout/activity_main.xml.  This is the part of the screen layout for the overall app. Use the Design View to change the color of the toolbar (the upper rectangle in the design - click on it) to any new color by choosing Background and the Edit pencil. Notice the change to the XML file.
 6. Edit fragment_first.xml. In the Design view, in the Palette window, click on Text (right underneath Common). Click on "Plain Text" and drag a field onto your screen.
 7. In the Attributes tab on the right, under the Properties of this widget, find the Declared Attributes, locate the "text" property, and reset the text value from "Name" to "Hello Android"
 8. Save content_main.xml
