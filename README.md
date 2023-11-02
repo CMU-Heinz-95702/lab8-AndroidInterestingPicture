@@ -31,7 +31,7 @@ https://www.jetbrains.com/help/idea/create-your-first-android-application.html
 4. Change the package name to something reasonable (e.g ds.edu.cmu.<yourAndrewID>)
 5. (Optional) Change the Save location by clicking the small file folder icon to bring up the FileChooser. You may need to enter a new directory name.
 6. Change the language to "Java" - it might default to "Kotlin" or nothing.
-7. Select Minimum SDK API 34 (Android 13 Tiramisu) - higher is fine, too - Gradle, and click Finish. (Choosing a higher level will result in fewer phones to choose from, but we'll be using an emulator.) Click Finish.
+7. Select Minimum SDK API 34 - higher is fine, too - Gradle, and click Finish. (Choosing a higher level will result in fewer phones to choose from, but we'll be using an emulator.) Click Finish.
 8. The "Completing Requested Actions" window will show next; wait for it to load everything, then click Finish. The default project will show up; the Gradle build may take a moment.
 
 You will see an Android project in the IDE; it will take a few moments to build.  It should be a fully-working "Hello Android" app.
@@ -52,7 +52,7 @@ You will see an Android project in the IDE; it will take a few moments to build.
 ## Test Hello Android in the AVD
 
 1. Click on the MainActivity.java tab to view the code.
-2. Tiramisu will likely be the default showing in the box next to the green triangle. Keep this setting. But if you want to experiment with other devices, open the Device Manager by expanding dropdown menu next to the green triangle button and choosing Device Manager (at the bottom).
+2. If the default default showing in the box next to the green triangle is lower than a Pixel 6, you should upgrade to a Pixel 7 using the Device Manager/Device Explorer. You can open the Device Manager by expanding dropdown menu next to the green triangle button and choosing Device Manager (at the bottom of the menu) or look on the right margin and click on Device Explorer. Just beware that new phones may require downloading a different API, which can be time consuming.
 3. Click the green triangle.
 4. Switch to the running AVD and verify that the Hello Android app has successfully launched. Note that it may take a few moments for the emulator's phone to boot up. The emulator should start as a separate program (it may be behind other windows). It should say "Hello First Fragment".
 
