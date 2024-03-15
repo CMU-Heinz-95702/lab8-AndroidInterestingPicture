@@ -5,16 +5,17 @@
 # Part 0: Android Studio
 ## You can do use AndroidStudio or IntelliJ, but AndroidStudio is **much** preferred!
 
-**Warning:** The emulators for Android take up a *lot* of disk space. Be sure you have at least 10G available!
+**Warning:** The emulators for Android take up a *lot* of disk space. Be sure you have at least 10G available! Delete or move things to make room.
 
 ### AndroidStudio Installation:
 Install Android Studio from:
 
 https://developer.android.com/studio
 
-The current version is Android Studio Giraffe, 2023.3.1, but newer versions are available.
+The current version is Android Studio Iguana, 2023.2.1, but newer, unstable versions may be available.
 
 ### Intellij:
+I strongly encourage you to use Android Studio.
 If you want to try IntelliJ, make sure that your IntelliJ has the Android Support plugin installed; it should have been installed on the original download, but check anyway.  Choose Preferences (or File-> Settings) -> Plugins, and click on the Installed tab. You should see Android Support already installed; if not, IntelliJ will prompt you to install it.  
 
 You'll also need the Android SDK installed. You can do this when you create the Hello Android project (but it might already be installed).  It does *not* replace the Java SDK - you need that, too (at least JDK 16).  
