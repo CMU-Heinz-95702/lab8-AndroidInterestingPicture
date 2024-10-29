@@ -12,7 +12,7 @@ Install Android Studio from:
 
 https://developer.android.com/studio
 
-The current version is Android Studio Iguana, 2023.2.1, but newer, unstable versions may be available.
+The current version is Android Studio Ladybug, 2024.2.1, but newer, unstable versions may be available.
 
 ### Intellij:
 I strongly encourage you to use Android Studio.
@@ -32,7 +32,7 @@ https://www.jetbrains.com/help/idea/create-your-first-android-application.html
 4. Change the package name to something reasonable (e.g ds.edu.cmu.<yourAndrewID>)
 5. (Optional) Change the Save location by clicking the small file folder icon to bring up the FileChooser. You may need to enter a new directory name.
 6. Change the language to "Java" - it might default to "Kotlin" or nothing.
-7. Select Minimum SDK API 34 - higher is fine, too - Gradle, and click Finish. (Choosing a higher level will result in fewer phones to choose from, but we'll be using an emulator.) Click Finish.
+7. Select Minimum SDK API 34 ("UpsideDownCake") - higher is fine, too - Gradle, and click Finish. (Choosing a higher level will result in fewer phones to choose from, but we'll be using an emulator.) Click Finish.
 8. The "Completing Requested Actions" window will show next; wait for it to load everything, then click Finish. The default project will show up; the Gradle build may take a moment.
 
 You will see an Android project in the IDE; it will take a few moments to build.  It should be a fully-working "Hello Android" app.
@@ -43,19 +43,24 @@ You will see an Android project in the IDE; it will take a few moments to build.
 
 - click the down arrow at the end of the Gradle JDK field
 
-- if jdk-17 shows up (16 is fine, too), click that; if not, click other, and (hopefully) all your JDK versions will show up: anything 16 or higher should be fine
+- if jdk-21 shows up (17 is fine, too), click that; if not, click other, and (hopefully) all your JDK versions will show up: anything 16 or higher should be fine
 
 - click Apply and OK
 
-**(Optional)** If the Gradle Build errors out, check File->Project Structure -> Project. The Gradle Version should be 7.5 (plugin version is 7.4.2). For me, even though these seemed to be set correctly, I had to reset them before it would work. Then the Gradle build executed again, and all was good.
+**(Optional)** If the Gradle Build errors out, check File->Project Structure -> Project. The Gradle Version should be 8.9. For me, even though these seemed to be set correctly, I had to reset them before it would work. Then the Gradle build executed again, and all was good.
 
 
 ## Test Hello Android in the AVD
 
 1. Click on the MainActivity.java tab to view the code.
-2. If the default default showing in the box next to the green triangle is lower than a Pixel 6, you should upgrade to a Pixel 7 using the Device Manager/Device Explorer. You can open the Device Manager by expanding dropdown menu next to the green triangle button and choosing Device Manager (at the bottom of the menu) or look on the right margin and click on Device Explorer. Just beware that new phones may require downloading a different API, which can be time consuming.
-3. Click the green triangle.
-4. Switch to the running AVD and verify that the Hello Android app has successfully launched. Note that it may take a few moments for the emulator's phone to boot up. The emulator should start as a separate program (it may be behind other windows). It should say "Hello First Fragment".
+2. If the default default showing in the box next to the green triangle is lower than a Pixel 6, you should upgrade to a Pixel 7 using the Device Manager/Device Explorer. You can open the Device Manager by expanding dropdown menu next to the green triangle button and choosing Device Manager (at the bottom of the menu) or look on the right margin and click on the Device Manager icon. Just beware that new phones may require downloading a different API, which can be time consuming.
+3. Click the green triangle. The Gradle build will take a few moments.
+4. Switch to the running AVD and verify that the Hello Android app has successfully launched. Note that it may take a few moments for the emulator's phone to boot up. The emulator should start as a separate program (it may be behind other windows). It should say "First Fragment" with a Next Button, along with some garbage text.
+
+![Figure 1](figure1.png)
+***Figure 1***
+
+Clicking the Next button sends you to the Second Fragment, which has a Previous button that sends you back to the First Fragment - not very exciting. Using fragments is a little more complicated that just using a single screen, which is the way Part 2 works.
 
 IF YOU HAVE TROUBLE with the emulator - in particular, if you get the message "Waiting for process to come online" and then it times out - try the fixes on this web site, one at a time:
 
@@ -70,10 +75,12 @@ Look at the running app. **Note the background color of the bar** at the top of 
 
 ## Exercises
 
+On the right side, expand the Project view. You should see a more complicated directory structure than the usual IntelliJ listing, becaaus there's more stuff to keep track of.
+
 1. Explore the contents of the project's res directory. These are the static resource files that your Android app uses.  They include such things as menus, user interface (UI) definitions, icons, and strings.
-2. Expand res>values to see the file strings.xml; this defines static strings that are used in your application. Change the string named "first_fragment_label", which currently should have the value "First Fragment", to your name (e.g. "Joe\'s App", with the escape character \ before the apostrophe). It is recommended practice to place String constants in this file instead of defining them in your code.
+2. Expand res>values to see the file strings.xml; this defines static strings that are used in your application: the app name, some labels, and the garbage text. Change the string named "first_fragment_label", which currently should have the value "First Fragment", to your name (e.g. "Joe\'s App", with the escape character \ before the apostrophe). It is recommended practice to place String constants in this file instead of defining them in your code.
 3. Save strings.xml
-4. Examine res/layout/activity_main.xml. Notice that this is the UI definition of the main Activity.  It does an "include layout" at the end for content_main. You'll likely be in "Design Mode" initially; change to "Code" using the button at the top right.
+4. Examine res/layout/activity_main.xml. Notice that this is the UI definition of the main Activity.  It does an "include layout" at the end for content_main. You'll likely be in "Design Mode" initially; my design screen was tiny, so I cliedk the + button to make it larger. You can also change to just showing the regular design view and not the blueprint view; there's a button for that. There are three buttons at the top right of this window that toggle between Code, Split, and Design Mode. Change to Code view.
 5. Edit res/layout/activity_main.xml.  This is the part of the screen layout for the overall app. Use the Design View to change the color of the toolbar (the upper rectangle in the design - click on it) to any new color by choosing Background and the Edit pencil. Notice the change to the XML file.
 6. Edit fragment_first.xml. In the Design view, in the Palette window, click on Text (right underneath Common). Click on "Plain Text" and drag a field onto your screen.
 7. In the Attributes tab on the right, under the Properties of this widget, find the Declared Attributes, locate the "text" property, and reset the text value from "Name" to "Hello Android"
