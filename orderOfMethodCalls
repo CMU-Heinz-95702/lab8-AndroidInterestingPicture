@@ -1,0 +1,9 @@
+UI: OnClick
+UI: GetPicture.search
+UI: BackgroundTask.startBackground
+background thread: BackgroundTask.doInBackground
+background thread: BackgroundTask.searchFlickr
+background thread: BackgroundTask.getRemoteXML
+background thread: BackgroundTask.getRemoteImage
+UI: BackgroundTask.onPostExecute
+UI: pictureReady
