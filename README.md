@@ -33,7 +33,7 @@ https://www.jetbrains.com/help/idea/create-your-first-android-application.html
 4. Change the package name to something reasonable (e.g ds.edu.cmu.<yourAndrewID>)
 5. (Optional) Change the Save location by clicking the small file folder icon to bring up the FileChooser. You may need to enter a new directory name.
 6. Change the language to "Java" - it might default to "Kotlin" or nothing.
-7. Select Minimum SDK API 35 ("VanillaIceCream") - higher is fine, too - Gradle, and click Finish. (Choosing a higher level will result in fewer phones to choose from, but we'll be using an emulator.) Click Finish.
+7. Select Minimum SDK API 35 ("VanillaIceCream") - higher is fine, too - Groovy, and click Finish. (Choosing a higher level will result in fewer phones to choose from, but we'll be using an emulator.) Click Finish.
 8. The "Completing Requested Actions" window will show next; wait for it to load everything, then click Finish. The default project will show up; the Gradle build may take a moment.
 
 You will see an Android project in the IDE; it will take a few moments to build.  It should be a fully-working "Hello Android" app.
@@ -85,7 +85,7 @@ Look at the running app. Note the background color of the bar at the top of the 
 
 ## Exercises
 
-On the right side, expand the Project view. You should see a more complicated directory structure than the usual IntelliJ listing, because there's more stuff to keep track of.
+On the left side, expand the Project view. You should see a more complicated directory structure than the usual IntelliJ listing, because there's more stuff to keep track of.
 
 1. Explore the contents of the project's res directory. These are the static resource files that your Android app uses.  They include such things as menus, user interface (UI) definitions, icons, and strings.
 2. Expand res>values to see the file strings.xml; this defines static strings that are used in your application: the app name, some labels, and the placeholder text. Change the string named "first_fragment_label", which currently should have the value "First Fragment", to your name (e.g. "Joe\'s App", with the escape character \ before the apostrophe). Then highlight all of the text in the "lorem_ipsum" tag and replace it with "My first Android app". It is recommended practice to place String constants in this file instead of defining them in your code.
