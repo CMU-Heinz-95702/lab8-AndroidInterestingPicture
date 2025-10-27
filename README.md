@@ -104,16 +104,9 @@ On the left side, expand the Project view. You should see a more complicated dir
 
 4. **(Optional)** Choose "Import project from external model", then Android Gradle and click Finish. The project should open; navigate to app->src->main->java, where you'll see the package directory. Note: I did not have to do this step; not sure if you will.
 
-5. Get a Flickr API key from:
-	http://www.flickr.com/services/api/misc.api_keys.html
-
-   Note: you will be asked to create a Yahoo account. Don't forget what you use as a password. Yep, a Yahoo account.
-
-6. Edit the file GetPicture.java and put your API key where it says "<< put your Flickr api key here >>" (replace the << and >> also!). Remember to save the file.
-
-7. Click the green play triangle in the Android Studio menubar to run the app.
-8. Choose the AVD you just created to run the app in.
-9. Switch to the running AVD and verify that the InterestingPicture app has successfully launched.  Type in a keyword to search such as "boat" and click Submit and you should see a picture displayed.
+5. Click the green play triangle in the Android Studio menubar to run the app.
+6. Choose the AVD you just created to run the app in.
+7. Switch to the running AVD and verify that the InterestingPicture app has successfully launched.  Type in a keyword to search such as "boat" and click Submit and you should see a picture displayed.
 
 Explore the project folders. The most important are the "java" and "res" folders.  The java folder has the source code for the application, and the res folder has the static resources as you saw in Part 1.
 
