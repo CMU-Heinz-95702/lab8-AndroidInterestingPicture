@@ -86,7 +86,7 @@ On the left side, expand the Project view. You should see a more complicated dir
 5. Edit res/layout/activity_main.xml.  This is the part of the screen layout for the overall app. Use the Design View to change the color of the toolbar (the upper rectangle in the design - click on it) to any new color by choosing Background and the Edit pencil. Notice the change to the XML file.
 6. Edit fragment_first.xml. In the Design view, in the Palette window, click on Text (right underneath Common). Click on "Plain Text" and drag a field onto your screen.
 7. In the Attributes tab on the right, under the Properties of this widget, find the Declared Attributes, locate the "text" property, and reset the text value from "Name" to "Hello Android"
-8. Save content_main.xml
+8. Save fragment_first.xml
 9. Use the red square to stop the app (if it was running).
 10. Click the green play triangle in the Android Studio menubar to run the app.
 11. Choose the AVD you just created to run the app in.
