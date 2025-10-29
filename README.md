@@ -12,7 +12,7 @@ Install Android Studio from:
 
 https://developer.android.com/studio/archive
 
-This site has all the versions for download. The version to use is Android Studio Meerkat | 2024.3.1 Patch 2. Newer versions are available, but I've had some issues with them, so use Meerkat to be saf.
+This site has all the versions for download. The version to use is Android Studio Meerkat | 2024.3.1 Patch 2. Newer versions are available, but I've had some issues with them, so use Meerkat to be safe.
 
 ### Intellij:
 I strongly encourage you to use Android Studio.
