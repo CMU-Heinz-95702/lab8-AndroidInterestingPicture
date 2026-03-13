@@ -13,7 +13,7 @@ Install Android Studio from:
 
 https://developer.android.com/studio
 
-The current version is Android Studio Meerkat, 2024.3.1, but newer, unstable versions may be available.
+The current version is Android Studio Panda 2, 2025.3.2, but newer, unstable versions may be available.
 
 ### Intellij Note:
 I strongly encourage you to use Android Studio.
@@ -33,7 +33,7 @@ https://www.jetbrains.com/help/idea/create-your-first-android-application.html
 4. Change the package name to something reasonable (e.g ds.edu.cmu.<yourAndrewID>)
 5. (Optional) Change the Save location by clicking the small file folder icon to bring up the FileChooser. You may need to enter a new directory name.
 6. Change the language to "Java" - it might default to "Kotlin" or nothing.
-7. Select Minimum SDK API 35 ("VanillaIceCream") - higher is fine, too - Groovy, and click Finish. (Choosing a higher level will result in fewer phones to choose from, but we'll be using an emulator.) Click Finish.
+7. Select Minimum SDK API 36 ("Baklava") - higher is fine, too - Groovy, and click Finish. (Choosing a higher level will result in fewer phones to choose from, but we'll be using an emulator.) Click Finish.
 8. The "Completing Requested Actions" window will show next; wait for it to load everything, then click Finish. The default project will show up; the Gradle build may take a moment.
 
 You will see an Android project in the IDE; it will take a few moments to build.  It should be a fully-working "Hello Android" app.
@@ -48,7 +48,7 @@ You will see an Android project in the IDE; it will take a few moments to build.
 
 - click Apply and OK
 
-**(Optional)** If the Gradle Build errors out, check File->Project Structure -> Project. The Gradle Version should be 8.11.1. For me, even though these seemed to be set correctly, I had to reset them before it would work. Then the Gradle build executed again, and all was good.
+**(Optional)** If the Gradle Build errors out, check File->Project Structure -> Project. The Gradle Version should be 9.3.1. For me, even though these seemed to be set correctly, I had to reset them before it would work. Then the Gradle build executed again, and all was good.
 
 
 ## Test Hello Android in the AVD
@@ -63,7 +63,7 @@ You will see an Android project in the IDE; it will take a few moments to build.
 ***Running Devices Icon***
 
 
-5. Note that it may take a few moments for the emulator's phone to boot up. You might also have to click the power button on the phone. The emulator should start as a separate program (it may be behind other windows). It should say "First Fragment" with a Next Button, along with some placeholder text.
+5. Note that it may take a few moments for the emulator's phone to boot up. You might also have to click the power button on the phone in the upper left corner of the phone window. The emulator should start as a separate program (it may be behind other windows). It should say "First Fragment" with a Next Button, along with some placeholder text.
 
 ![Figure 1](figure1.png)
 ***Hello Android***
@@ -118,16 +118,13 @@ Save content_main.xml. Rerun the app.
 
 4. **(Optional)** Choose "Import project from external model", then Android Gradle and click Finish. The project should open; navigate to app->src->main->java, where you'll see the package directory. Note: I did not have to do this step; not sure if you will.
 
-5. Get a Flickr API key from:
-	http://www.flickr.com/services/api/misc.api_keys.html
+5. Edit the file GetPicture.java and put your API key where it says "<< put your Flickr api key here >>" (replace the << and >> also!). Remember to save the file.
 
-   Note: you will be asked to create a Yahoo account. Don't forget what you use as a password. Yep, a Yahoo account.
+6. Click the green play triangle in the Android Studio menubar to run the app.
 
-6. Edit the file GetPicture.java and put your API key where it says "<< put your Flickr api key here >>" (replace the << and >> also!). Remember to save the file.
+7. Choose the AVD you just created to run the app in.
 
-7. Click the green play triangle in the Android Studio menubar to run the app.
-8. Choose the AVD you just created to run the app in.
-9. Switch to the running AVD and verify that the InterestingPicture app has successfully launched.  Type in a keyword to search such as "boat" and click Submit and you should see a picture displayed.
+8. Switch to the running AVD and verify that the InterestingPicture app has successfully launched.  Type in a keyword to search such as "boat" and click Submit and you should see a picture displayed.
 
 Explore the project folders. The most important are the "java" and "res" folders.  The java folder has the source code for the application, and the res folder has the static resources as you saw in Part 1.
 
@@ -142,12 +139,13 @@ The GetPicture class is used to first search Flickr for a pictures related to a 
 
 ### :checkered_flag: Answer question 3 on the Canvas quiz named Lab8_Quiz.
 
-10. The application is missing the feedback "Here is a picture of a ..." or "Sorry, I could not find a picture of a..."
+9. The application is missing the feedback "Here is a picture of a ..." or "Sorry, I could not find a picture of a..."
      a. Add a new TextView to res/layout/content_main.xml for this feedback
      b. In the pictureReady method, findViewById your new TextView
      c. Set the text of the TextView to the appropriate string (depending on whether the picture is found or not).
        (Where can you get the search term from to add to this string?)
-11. Run and test it.
+
+10. Run and test it.
 
 ### :checkered_flag: Answer question 4 on the Canvas quiz named Lab8_Quiz.
 
