@@ -13,7 +13,7 @@ Install Android Studio from:
 
 https://developer.android.com/studio
 
-The current version is Android Studio Panda 2, 2025.3.2, but newer, unstable versions may be available.
+The current version is Android Studio Panda 2. Beware of newer but possibly unstable versions.
 
 ### Intellij Note:
 I strongly encourage you to use Android Studio.
