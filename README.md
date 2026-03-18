@@ -118,13 +118,11 @@ Save content_main.xml. Rerun the app.
 
 4. **(Optional)** Choose "Import project from external model", then Android Gradle and click Finish. The project should open; navigate to app->src->main->java, where you'll see the package directory. Note: I did not have to do this step; not sure if you will.
 
-5. Edit the file GetPicture.java and put your API key where it says "<< put your Flickr api key here >>" (replace the << and >> also!). Remember to save the file.
+5. Click the green play triangle in the Android Studio menubar to run the app.
 
-6. Click the green play triangle in the Android Studio menubar to run the app.
+6. Choose the AVD you just created to run the app in.
 
-7. Choose the AVD you just created to run the app in.
-
-8. Switch to the running AVD and verify that the InterestingPicture app has successfully launched.  Type in a keyword to search such as "boat" and click Submit and you should see a picture displayed.
+7. Switch to the running AVD and verify that the InterestingPicture app has successfully launched.  Type in a keyword to search such as "boat" and click Submit and you should see a picture displayed.
 
 Explore the project folders. The most important are the "java" and "res" folders.  The java folder has the source code for the application, and the res folder has the static resources as you saw in Part 1.
 
@@ -139,13 +137,13 @@ The GetPicture class is used to first search Flickr for a pictures related to a 
 
 ### :checkered_flag: Answer question 3 on the Canvas quiz named Lab8_Quiz.
 
-9. The application is missing the feedback "Here is a picture of a ..." or "Sorry, I could not find a picture of a..."
+8. The application is missing the feedback "Here is a picture of a ..." or "Sorry, I could not find a picture of a..."
      a. Add a new TextView to res/layout/content_main.xml for this feedback
      b. In the pictureReady method, findViewById your new TextView
      c. Set the text of the TextView to the appropriate string (depending on whether the picture is found or not).
        (Where can you get the search term from to add to this string?)
 
-10. Run and test it.
+9. Run and test it.
 
 ### :checkered_flag: Answer question 4 on the Canvas quiz named Lab8_Quiz.
 
