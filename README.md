@@ -93,14 +93,14 @@ On the left side, expand the Project view. You should see a more complicated dir
 
 ### :checkered_flag: Answer question 2 on the Canvas quiz named Lab8_Quiz.
 
-4. Examine res/layout/activity_main.xml. This is the UI definition of the main Activity.  There are three buttons at the top right of this window that toggle between Code, Split, and Design Mode (see the diagram below). You'll likely be in "Design Mode" initially; my design screen was tiny, so I clicked the + button to make it larger. The middle button changes to showing the design view together with the XML view; the left button switches to the XML view.
+4. Examine res/layout/content_main.xml. This is the UI definition of the main Activity.  There are three buttons at the top right of this window that toggle between Code, Split, and Design Mode (see the diagram below). You'll likely be in "Design Mode" initially; my design screen was tiny, so I clicked the + button to make it larger. The middle button changes to showing the design view together with the XML view; the left button switches to the XML view.
    
 ![DesignView](designView.png)
 
 ***XML View, Both, Design View Icons***
 
 
-5. Edit res/layout/activity_main.xml.  This is the part of the screen layout for the overall app. Use the Design View to change the color of the toolbar (the upper rectangle in the design - click on it; its hard to tell that it is a component, but its outline should show up) to any new color: make sure the Attributes window is showing (if it's collapsed, there should be a sideways "Attributes" label on the right as shown above - click it). Scroll down until you can expand "All Attributes", then find "background" and the Edit pencil, which will bring up a color choose. Choose a color - the design view should change. Change to the XML view and notice the change to the XML file: the MaterialToolBar should now have a background setting using a numeric code for the color you chose. Rerun the app.
+5. Edit res/layout/content_main.xml.  This is the part of the screen layout for the overall app. Use the Design View to change the color of the toolbar (the upper rectangle in the design - click on it; its hard to tell that it is a component, but its outline should show up) to any new color: make sure the Attributes window is showing (if it's collapsed, there should be a sideways "Attributes" label on the right as shown above - click it). Scroll down until you can expand "All Attributes", then find "background" and the Edit pencil, which will bring up a color choose. Choose a color - the design view should change. Change to the XML view and notice the change to the XML file: the MaterialToolBar should now have a background setting using a numeric code for the color you chose. Rerun the app.
 
 6. Edit fragment_first.xml. In the Design view, if the Palette window not visible, click the word Palette (printed sideways) in the left margin. In the Palette window, click on Text (right underneath Common). Click on "Plain Text" and drag a field onto your screen.
 
