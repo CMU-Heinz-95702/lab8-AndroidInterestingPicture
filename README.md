@@ -53,9 +53,9 @@ https://www.jetbrains.com/help/idea/create-your-first-android-application.html
 ## Test Hello Android in the AVD
 
 1. Click on the MainActivity.java tab to view the code.
-2. If the default default showing in the box next to the green triangle is lower than a Pixel 6, you should upgrade to a Pixel 8 using the Device Manager/Device Explorer. You can open the Device Manager by expanding dropdown menu next to the green triangle button and choosing Device Manager (at the bottom of the menu) or look on the right margin and click on the Device Manager icon. Just beware that new phones may require downloading a different API, which can be time consuming.
+2. If the default device showing in the box next to the green triangle is lower than a Pixel 6, you should upgrade to a Pixel 8 using the Device Manager/Device Explorer. You can open the Device Manager by expanding dropdown menu next to the green triangle button and choosing Device Manager (at the bottom of the menu) or look on the right margin and click on the Device Manager icon. Just beware that new phones may require downloading a different API, which can be time consuming.
 3. Click the green triangle. The Gradle build will take a few moments if you've changed any settings.
-4. Switch to the running AVD (the second icon in the icon menu on the right hand side) and verify that the Hello Android app has successfully launched. Note that it may take a few moments for the emulator's phone to boot up. The emulator should start as a separate program (it may be behind other windows). It should say "First Fragment" with a Next Button, along with some garbage text.
+4. Switch to the running devices panel (the second icon in the icon menu on the right hand side) and verify that the Hello Android app has successfully launched. Note that it may take a few moments for the emulator's phone to boot up. The emulator should start as a separate program (it may be behind other windows). It should say "First Fragment" with a Next Button, along with some garbage text.
 
 ![Figure 1](figure1.png)
 ***Figure 1***
