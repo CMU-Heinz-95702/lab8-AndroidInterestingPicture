@@ -53,9 +53,9 @@ https://www.jetbrains.com/help/idea/create-your-first-android-application.html
 ## Test Hello Android in the AVD
 
 1. Click on the MainActivity.java tab to view the code.
-2. If the default default showing in the box next to the green triangle is lower than a Pixel 6, you should upgrade to a Pixel 8 using the Device Manager/Device Explorer. You can open the Device Manager by expanding dropdown menu next to the green triangle button and choosing Device Manager (at the bottom of the menu) or look on the right margin and click on the Device Manager icon. Just beware that new phones may require downloading a different API, which can be time consuming.
+2. If the default showing in the box next to the green triangle is lower than a Pixel 6, you should upgrade to a Pixel 8 using the Device Manager/Device Explorer. You can open the Device Manager by expanding dropdown menu next to the green triangle button and choosing Device Manager (at the bottom of the menu) or look on the right margin and click on the Device Manager icon. Just beware that new phones may require downloading a different API, which can be time consuming.
 3. Click the green triangle. The Gradle build will take a few moments if you've changed any settings.
-4. Switch to the running AVD (the second icon in the icon menu on the right hand side) and verify that the Hello Android app has successfully launched. Note that it may take a few moments for the emulator's phone to boot up. The emulator should start as a separate program (it may be behind other windows). It should say "First Fragment" with a Next Button, along with some garbage text.
+4. Switch to the running devices panel (the second icon in the icon menu on the right hand side) and verify that the Hello Android app has successfully launched. Note that it may take a few moments for the emulator's phone to boot up. The emulator should start as a separate program (it may be behind other windows). It should say "First Fragment" with a Next Button, along with some garbage text.
 
 ![Figure 1](figure1.png)
 ***Figure 1***
@@ -115,15 +115,18 @@ Within the java folder, you will see two classes:
 ds.cmu.edu.interestingpicture.InterestingPicture
 ds.cmu.edu.interestingpicture.GetPicture
 
-Study the InterestingPicture class.  Android applications are organized into "activities" and this is the main activity for this application.  Read the comments and the code and understand how it works.
+8. Study the InterestingPicture class.  Android applications are organized into "activities" and this is the main activity for this application.  Read the comments and the code and understand how it works.
 
-The GetPicture class is used to first search Flickr for a pictures related to a keyword, and then fetch a picture.  So that the phone user interface is not frozen while these network activities take place, these network actions must take place in a helper thread.  BackgroundTask makes it easy to use a helper thread.
+9. The GetPicture class is used to first search Flickr for a pictures related to a keyword, and then fetch a picture.  So that the phone user interface is not frozen while these network activities take place, these network actions must take place in a helper thread.  BackgroundTask makes it easy to use a helper thread.
 
 10. The application is missing the feedback "Here is a picture of a ..." or "Sorry, I could not find a picture of a..."
      a. Add a new TextView to res/layout/content_main.xml for this feedback
+
      b. In the pictureReady method, findViewById your new TextView
+
      c. Set the text of the TextView to the appropriate string (depending on whether the picture is found or not).
        (Where can you get the search term from to add to this string?)
+
 11. Run and test it.
 
 12. Sort the following list of methods into the order they are invoked when "submit" is clicked, and indicate whether they are being run in the "UI" thread or a helper thread.
