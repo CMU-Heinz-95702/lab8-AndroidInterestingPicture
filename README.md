@@ -96,7 +96,7 @@ On the left side, expand the Project view. You should see a more complicated dir
 
 # Part 2 Interesting Picture
 
-1. Download the zipped AndroidInterestingPicture from Canvas and unzip it.
+1. Download the zipped AndroidInterestingPicture from github and unzip it.
 
 2. Open Android Studio. **If you already have a window open from Part 1, close it.**
 
